@@ -1,7 +1,6 @@
 % git, version-controll
 
 # Initialize a git repository.
-# This is test message to test whether multiline commnet is available or not.
 git init
 
 # Clone a git repository
@@ -135,3 +134,48 @@ git push --prune <remote_name>
 
 # Publish tags that aren't yet in the remote repository
 git push --tags
+
+# Revert the most recent commit
+git revert HEAD
+
+# Revert the 5th last commit
+git revert HEAD~4
+
+# Revert a specific commit
+git revert <shortened_commit_hash>
+
+# Revert multiple commits
+git revert <branch_name~5>..<branch_name~2>
+
+# Don't create new commits, just change the working tree
+git revert -n <commit-hash>
+
+# Unstage everything
+git reset
+
+# Unstage specific file(s)
+git reset <path/to/file1> <path/to/file2>
+
+# Undo the last commit, keeping its changes (and any further uncommitted changes) in the filesystem
+git reset HEAD~
+
+# Undo the last two commits, adding their changes to the index, i.e. staged for commit
+git reset --soft HEAD~2
+
+# Discard any uncommitted changes, staged or not (for only unstaged changes, use git checkout)
+git reset --hard
+
+# Reset the repository to a given commit, discarding committed, staged and uncommitted changes since then
+git reset --hard <commit_hash>
+
+# Show the history of a particular file or directory, including differences
+git log -p path/to/file_or_directory
+
+# Show a graph of commits in the current branch using only the first line of each commit message(add --pretty option to show details).
+git log --oneline --graph
+
+# Show a graph of all commits, tags and branches in the entire repo(add --pretty option to show details.)
+git log --oneline --decorate --all --graph
+
+# Show commits between two dates (yyyy-mm-dd)
+git log --before="<date1>" --after="<date2>"
