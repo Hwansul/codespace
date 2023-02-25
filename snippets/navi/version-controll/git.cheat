@@ -1,6 +1,10 @@
 % git, version-controll
 
+<<<<<<< HEAD
 # Initialize a git repository.
+=======
+# Initialize a git repository
+>>>>>>> parent of a178a64... test: try to write multiline comment
 git init
 
 # Clone a git repository
