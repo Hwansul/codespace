@@ -1,6 +1,7 @@
 % git, version-controll
 
-# Initialize a git repository
+# Initialize a git repository.
+# This is test message to test whether multiline commnet is available or not.
 git init
 
 # Clone a git repository
