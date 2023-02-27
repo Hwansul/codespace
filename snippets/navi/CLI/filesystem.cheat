@@ -1,0 +1,46 @@
+% CLI, filesystem
+
+# List files one per line
+exa --oneline
+
+# List all files, including hidden files
+exa --all
+
+# Long format list (permissions, ownership, size and modification date) of all files
+exa --long --all
+
+# Display a tree of files
+exa --long --tree
+
+# List files sorted by modification date (oldest first)
+exa --long --sort=modified
+
+# List files with their headers, icons, and Git statuses
+exa --long --header --icons --git
+
+# Don't list files mentioned in .gitignore
+exa --git-ignore
+
+# Print the contents of a file to the standard output
+bat <path/to/file>
+
+# Concatenate several files into the target file
+bat <file1> <file2> > <target_file>
+
+# Append several files into the target file
+bat <file1> <file2> >> <target_file>
+
+# Number all output lines
+bat --number <path/to/file>
+
+# Syntax highlight a JSON file
+bat --language json file.json
+
+# Display all supported languages
+bat --list-languages
+
+# Use diff-so-fancy on one diff
+git diff --color | diff-so-fancy
+
+# Use diff-so-fancy on a diff/patch file
+cat diff.txt | diff-so-fancy
