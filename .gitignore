@@ -10,4 +10,7 @@
 !.yarn/cache
 #.pnp.*
 
+# Added by mindulle.
 git-sim_media
+.editorconfig
+yarn.lock
