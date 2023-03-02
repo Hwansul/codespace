@@ -1,0 +1,69 @@
+% install-to-ubuntu, built-in, frequently-used
+
+# Change package mirror default to kakao's one.
+sudo sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
+
+# Update, Upgrade and autoremove packages.
+sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove
+
+# Install zsh
+sudo apt -y install zsh
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# If basic shell have not been changed on installation, change basic shell manually.
+chsh -s $(which zsh)
+
+# Install Korean language packages.
+sudo apt -y install language-pack-ko \
+sudo locale-gen ko_KR.EUC-KR \
+sudo update-locale LANG=ko_KR.UTF-8 LC_MESSAGES=POSIX \
+sudo apt -y install fonts-unfonts-core fonts-unfonts-extra fonts-nanum fonts-nanum-coding fonts-nanum-eco fonts-nanum-extra fonts-noto-cjk
+
+# Clone and install fuzzy search on zsh.
+sudo apt -y install git \
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf \
+bash ~/.fzf/install
+
+# Generate ssh key pare in order to identify current machie and computer.
+ssh-keygen -t rsa \
+cat ~/.ssh/id_rsa.pub
+
+# Install powerlevel10k as a zsh theme.
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k \
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+
+# Homebrew requirements on Debian or Ubuntu
+sudo apt-get install build-essential procps curl file git
+
+# Install Homebrew on Linux machine.
+test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)" \
+test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" \
+test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bash_profile \
+echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.profile
+
+# configure powerlevel10k
+p10k configure
+
+# Install navi
+brew install navi
+
+# Install z-shell navi widget. Ctrl+G is assigned to launching navi.
+echo 'eval "$(navi widget zsh)"' >> ~/.zshrc \
+source ~/.zshrc
+
+# add my navi cheat sheet to current machine.
+navi repo add https://github.com/mindulle/codespace
+
+# Install golang via homebrew
+brew install go
+
+# Set environment variables to run go modules on the terminal.
+echo "export GOPATH=$HOME/go" >> ~/.zshrc \
+echo "export PATH=$GOPATH/bin:$PATH" >> ~/.zshrc \
+source ~/.zshrc
+
+# Install nap in order to use snippets.
+go install github.com/maaslalani/nap@main
+
