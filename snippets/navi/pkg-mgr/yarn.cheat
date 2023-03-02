@@ -1,4 +1,4 @@
-% yarn, nodejs, pkmgr
+% yarn, nodejs, pkg-mgr
 
 # Install all dependencies referenced in the package.json file (the install is optional)
 yarn install
