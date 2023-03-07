@@ -1,6 +1,6 @@
 #!/bin/sh
 BASE_URL="https://raw.githubusercontent.com/mindulle/codespace/main/snippets"
-PATH_TO_FILE=`find ../snippets/ | sed 's|^../snippets/||'`
+PATH_TO_FILE=`find ../snippets/ -type f | sed 's|^../snippets/||'`
 
 for path in ${PATH_TO_FILE}
 do
