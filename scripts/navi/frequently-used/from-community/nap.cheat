@@ -1,0 +1,31 @@
+% nap, frequently-used, from-community
+
+# Install With Golang
+go install github.com/maaslalani/nap@main
+
+# Launch the interactive interface
+nap
+
+# Save some code from the internet. (My private preferred code is hosted at https://mindulle.github.io/codespace/snippets/shell/name_of_script.sh)
+curl <URL_OF_SNIPPET> | nap <path/to/file>
+
+# TODO: add a script which save snippets into local nap from my remote repo. (using above command)
+bash <(curl -s https://mindulle.github.io/codespace/snippets/shell/save_into_nap_from_my_snippets.sh)
+
+# Fuzzy find snippet.
+nap fuzzy
+
+# Write snippet to a file.
+nap <path/to/snippet> > <path/to/file>
+
+# TODO: add a script that write files from local nap snippets. (using above command)
+bash <(curl -s https://mindulle.github.io/codespace/snippets/shell/write_snippet_from_local_nap.sh)
+
+# Copy snippet to clipboard on macOS
+nap foobar | pbcopy
+
+# Copy snippet to clipboard on Linux
+nap foobar | xclip
+
+# Fuzzy find a snippet with Gum
+nap $(nap list | gum filter)
