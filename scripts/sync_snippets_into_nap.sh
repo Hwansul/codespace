@@ -5,6 +5,5 @@ PATH_TO_FILE=`find ../snippets/ | sed 's|^../snippets/||'`
 for path in ${PATH_TO_FILE}
 do
   `curl $BASE_URL/$path | nap $path`
-  echo "curl $BASE_URL/$path | nap $path"
 done
 
