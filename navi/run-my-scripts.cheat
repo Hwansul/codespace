@@ -5,8 +5,8 @@ navi repo add https://github.com/mindulle/codespace
 # Install snippets written by mindulle into local nap from remote git repo.
 bash <(curl -s https://raw.githubusercontent.com/mindulle/codespace/main/scripts/sync_snippets_into_nap.sh)
 
-# Run a script which help me to write appropriate conventional commit. In order to run this command, you should install gum. run 'brew install gum'
+# Run a script for conventional commit. It require installation of gum.
 bash <(curl -s https://raw.githubusercontent.com/mindulle/codespace/main/scripts/gum/conventional-commit.sh)
 
-# Run a script which help me to manage my git branch. In order to run this command, you should install gum. run 'brew install gum'
-bash <(curl -s https://raw.githubusercontent.com/mindulle/codespace/main/scripts/gum/git-branch-manage.sh)
+# Run a script for managing branch. It require installation of gum.
+bash <(curl -s https://raw.githubusercontent.com/mindulle/codespace/main/scripts/gum/git-branch-manager.sh)
