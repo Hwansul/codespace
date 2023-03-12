@@ -1,0 +1,117 @@
+% learn-bash
+
+# Declaring a variable looks like this:
+variable="Some string"
+
+# But not like this:
+variable = "Some string" # => returns error "variable: command not found"
+
+# Nor like this:
+variable= "Some string" # => returns error: "Some string: command not found"
+
+# Using the variable:
+# print a variable as a string.
+echo "$variable" # => Some string
+
+# print a variable as a shell variable. It won't expand the variables.
+echo '$variable' # => $variable
+
+# Parameter expansion ${...}:
+echo "${variable}" # => Some string
+
+# String substitution in variables. It will return a string.
+echo "${variable/Some/A}"
+
+# This will return only the first 7 characters of the value
+length=7
+echo "${variable:0:length}"
+
+# This will return the last 5 characters (note the space before -5).
+echo "${variable: -5}" # => tring
+
+# falsy ? 0 : DefaultValue.
+echo "${foo:-"DefaultValueIfFooIsMissingOrEmpty"}"
+
+# Declare an array with 6 elements:
+array=(one two three four five six)
+
+# Print the first element of array:
+echo "${array[0]}"
+
+# Print all elements of array:
+echo "${array[@]}" 
+
+# There are some useful built-in variables, like:
+echo "Last program's return value: $?"
+echo "Script's PID: $$"
+echo "Number of arguments passed to script: $#"
+echo "All arguments passed to script: $@"
+echo "Script's arguments separated into different variables: $1 $2..."
+
+# Brace Expansion {...}, used to generate arbitrary strings:
+echo {1..10} 
+echo {a..z} 
+
+# Print all aliases
+alias -p
+
+# Expressions are denoted with the following format. You need to use this for arithmatic caculations.
+echo $(( 10 + 5 ))
+
+# Lists every file and directory on a separate line
+ls -l 
+
+# Sorts the directory contents by last-modified date (descending)
+ls -t 
+
+# Recursively `ls` this directory and all of its subdirectories
+ls -R 
+
+# using a pipe |. Commands chained in this way are called a "pipeline", and are run concurrently.
+ls -l | grep "\.txt"
+
+# Use `cat` to print files to stdout:
+cat file.txt
+
+# "-e" to interpret the newline escape characters as escape characters: RESULT = START OF FILE [contents of file.txt] END OF FILE
+echo -e "START OF FILE\n$Contents\nEND OF FILE"
+
+# Use `cp` to copy files or directories from one place to another. It is not only affect original, but also will overwrite the destination.
+cp srcFile.txt clone.txt
+cp -r srcDirectory/dst/
+
+# Use `mv` to move files or directories from one place to another. `mv` is useful for renaming files!
+mv s0urc3.txt dst.txt
+
+# Use `mkdir` to create new directories.
+mkdir myNewDir
+
+# The `-p` flag causes new intermediate directories to be created as necessary.
+mkdir -p myNewDir/with/intermediate/directories
+
+# Cleanup temporary files verbosely (add '-i' for interactive)
+rm -v output.out error.err output-and-error.log
+
+# Commands can be substituted within other commands using $( ):
+echo "There are $(ls | wc -l) items here."
+
+# The same can be done using backticks `` but they can't be nested - the preferred way is to use $( ).
+echo "There are `ls | wc -l` items here."
+
+# prints last 10 lines of file.txt
+tail -n 10 file.txt
+
+# prints first 10 lines of file.txt
+head -n 10 file.txt
+
+# print file.txt's lines in sorted order
+sort file.txt
+
+# report or omit repeated lines, with -d it reports them
+uniq -d file.txt
+
+# prints only the first column before the ',' character
+cut -d ',' -f 1 file.txt
+
+# replaces every occurrence of 'okay' with 'great' in file.txt (regex compatible). -i or --in-place erase the input file
+sed -i 's/okay/great/g' file.txt
