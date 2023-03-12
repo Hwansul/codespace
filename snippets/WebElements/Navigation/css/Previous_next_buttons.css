@@ -1,0 +1,7 @@
+.previous-next-buttons {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* You can use the arrow buttons to create the previous and next buttons. */

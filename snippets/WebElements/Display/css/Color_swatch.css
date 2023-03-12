@@ -1,0 +1,14 @@
+.swatch {
+  /* Wrap the items */
+  display: flex;
+  flex-wrap: wrap;
+}
+.swatch__item {
+  /* Rounded border */
+  border-radius: 9999px;
+  height: 1.5rem;
+  width: 1.5rem;
+
+  /* Space between items */
+  margin: 0.5rem;
+}

@@ -1,0 +1,24 @@
+.pricing-table {
+  /* Content is centered horizontally */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-table__column {
+  /* Content is centered vertically */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* Make all columns have the same width */
+  flex: 1;
+
+  /* OPTIONAL: Space between columns */
+  margin: 0 0.5rem;
+
+  /* OPTIONAL: Border */
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+}

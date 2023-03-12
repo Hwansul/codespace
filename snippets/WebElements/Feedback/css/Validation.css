@@ -1,0 +1,27 @@
+.validation-icon {
+  /* Used to position the validation icon */
+  position: relative;
+}
+
+.validation-icon__input {
+  /* Border */
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+
+  /* Take the full width */
+  width: 100%;
+  height: 2rem;
+
+  /* Don't overlap the icon */
+  padding-right: 1.5rem;
+}
+
+.validation-icon__icon {
+  /* Positioned at the right side */
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  z-index: 10;
+}

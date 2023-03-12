@@ -1,0 +1,11 @@
+.fixed-at-side {
+  position: fixed;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
+.fixed-at-side--l {
+  left: 0;
+}
+.fixed-at-side--r {
+  right: 0;
+}

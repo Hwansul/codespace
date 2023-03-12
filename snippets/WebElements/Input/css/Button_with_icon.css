@@ -1,0 +1,11 @@
+.button-with-icon {
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button-with-icon__label {
+  margin-left: 0.5rem;
+}
