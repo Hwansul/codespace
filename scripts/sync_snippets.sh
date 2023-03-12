@@ -1,4 +1,8 @@
 #!/bin/sh
+### Clean exisiting snippets.
+find $HOME/.local/share/nap -type f -delete
+
+### Sync snippets into local nap from remote repository. 
 repo_url="https://github.com/mindulle/codespace.git"
 
 # clone the repository to a temporary directory and move to scripts directory.
@@ -9,8 +13,6 @@ cd codespace/scripts
 
 # get subdirectories of snippets directory.
 sub_directories=`find $temp_dir/codespace/snippets/ -type f | sed "s|^$temp_dir/codespace/snippets/||"`
-
-# echo ${sub_directories}
 
 # save snippets into local nap client.
 for dir in ${sub_directories}
