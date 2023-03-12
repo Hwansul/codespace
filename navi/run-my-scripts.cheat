@@ -10,3 +10,6 @@ bash <(curl -s https://raw.githubusercontent.com/mindulle/codespace/main/scripts
 
 # Run a script for managing branch. It require installation of gum.
 bash <(curl -s https://raw.githubusercontent.com/mindulle/codespace/main/scripts/gum/git-branch-manager.sh)
+
+# Fuzzy find a snippet with Gum
+nap $(nap list | gum filter)
