@@ -13,3 +13,6 @@ bash <(curl -s https://raw.githubusercontent.com/mindulle/codespace/main/scripts
 
 # Fuzzy find a snippet with Gum
 nap $(nap list | gum filter)
+
+# Fuzzy find a snippet with Gum and copy to windows clipboard in WSL2
+nap $(nap list | gum filter) | clip.exe
