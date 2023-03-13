@@ -5,8 +5,8 @@
 basedir_for_local_app="$HOME/.local/share"  # for WSL2 in windows 10
 # basedir_for_local_app=path/to/dir           # for macOS
 
-find "$basedir_for_local_app/nap" -type f -delete
-find "$basedir_for_local_app/navi/cheats" -type d -delete
+find $basedir_for_local_app/nap -type f -delete
+find $basedir_for_local_app/navi/cheats/mindulle__codespace -type f -delete
 
 ### Sync snippets into local nap from remote repository. 
 repo_url="https://github.com/mindulle/codespace.git"
