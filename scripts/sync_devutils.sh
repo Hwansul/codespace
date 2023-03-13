@@ -1,6 +1,12 @@
 #!/bin/sh
-### Clean exisiting snippets.
-find $HOME/.local/share/nap -type f -delete
+### Clean exisiting snippets and cheatsheets
+
+## Assign each other values in this variable where operating system you are working.
+basedir_for_local_app = $HOME/.local/share/nap  # for WSL2 in windows 10
+# basedir_for_local_app = path/to/dir           # for macOS
+
+find $basedir_for_local_app/nap -type f -delete
+find $basedir_for_local_app/navi/cheats -type f -delete
 
 ### Sync snippets into local nap from remote repository. 
 repo_url="https://github.com/mindulle/codespace.git"
