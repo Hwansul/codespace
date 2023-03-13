@@ -26,4 +26,4 @@ rm -rf $temp_dir
 
 
 ### Update local navi cheatsheet
-navi repo add https://github.com/mindulle/codespace
+navi repo add mindulle/codespace
