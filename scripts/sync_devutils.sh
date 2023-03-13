@@ -23,3 +23,7 @@ done
 # remove the temp directory.
 cd ../..
 rm -rf $temp_dir
+
+
+### Update local navi cheatsheet
+navi repo add https://github.com/mindulle/codespace
