@@ -30,5 +30,5 @@ done
 cd ../..
 rm -rf $temp_dir
 
-### Update local navi cheatsheet
+### Notify user to update local navi cheatsheet.
 echo "Please run following command in your local machine:\nnavi repo add mindulle/codespace"
