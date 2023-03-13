@@ -2,11 +2,11 @@
 ### Clean exisiting snippets and cheatsheets
 
 ## Assign each other values in this variable where operating system you are working.
-basedir_for_local_app = $HOME/.local/share/nap  # for WSL2 in windows 10
-# basedir_for_local_app = path/to/dir           # for macOS
+basedir_for_local_app=$($HOME/.local/share)  # for WSL2 in windows 10
+# basedir_for_local_app=path/to/dir           # for macOS
 
-find $basedir_for_local_app/nap -type f -delete
-find $basedir_for_local_app/navi/cheats -type d -delete
+find $($basedir_for_local_app/nap) -type f -delete
+find $($basedir_for_local_app/navi/cheats) -type d -delete
 
 ### Sync snippets into local nap from remote repository. 
 repo_url="https://github.com/mindulle/codespace.git"
@@ -18,7 +18,7 @@ git clone $repo_url
 cd codespace/scripts
 
 # get subdirectories of snippets directory.
-sub_directories=`find $temp_dir/codespace/snippets/ -type f | sed "s|^$temp_dir/codespace/snippets/||"`
+sub_directories=$(find $temp_dir/codespace/snippets/ -type f | sed "s|^$temp_dir/codespace/snippets/||")
 
 # save snippets into local nap client.
 for dir in ${sub_directories}
