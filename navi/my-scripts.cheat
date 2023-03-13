@@ -3,7 +3,7 @@
 navi repo add https://github.com/mindulle/codespace
 
 # Sync my(Mindulle) snippets from remote repository.
-bash <(curl -s https://raw.githubusercontent.com/mindulle/codespace/main/scripts/sync_snippets.sh)
+bash <(curl -s https://raw.githubusercontent.com/mindulle/codespace/main/scripts/sync_devutils.sh)
 
 # Run a script for conventional commit. It require installation of gum.
 bash <(curl -s https://raw.githubusercontent.com/mindulle/codespace/main/scripts/gum/conventional-commit.sh)
