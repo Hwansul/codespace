@@ -1,0 +1,8 @@
+% misc, built-in, frequently-used
+# Generate a hex-encoded random number.
+openssl rand -hex <digit>
+
+# Generate a base64-encoded random number.
+openssl rand -base64 <digit>
+
+
