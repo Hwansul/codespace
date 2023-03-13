@@ -23,13 +23,12 @@ sub_directories=$(find $temp_dir/codespace/snippets/ -type f | sed "s|^$temp_dir
 # save snippets into local nap client.
 for dir in ${sub_directories}
 do
-  `nap $dir < $temp_dir/codespace/snippets/$dir`
+  $(nap $dir < $temp_dir/codespace/snippets/$dir)
 done
 
 # remove the temp directory.
 cd ../..
 rm -rf $temp_dir
 
-
 ### Update local navi cheatsheet
-navi repo add mindulle/codespace
+echo "Please run following command in your local machine:\nnavi repo add mindulle/codespace"
