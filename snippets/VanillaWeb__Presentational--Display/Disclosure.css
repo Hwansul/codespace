@@ -1,0 +1,10 @@
+/**
+ * 1. Styling for Firefox and other non-webkit/blink browsers
+ * 2. Styling for webkit and blink
+ */
+
+summary, /* 1 */
+summary::-webkit-details-marker {
+  /* 2 */
+  list-style-image: url("");
+}

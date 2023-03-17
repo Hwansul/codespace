@@ -1,5 +1,7 @@
 # Project Structure
 
+## 업데이트 필요. 아니야 나만 볼건데 영어로 해도 돼.
+
 ```shell
 ├── documents # TODO: Document project will be there. DocumentCSS, jsdoc, pydoc, and so on...
 ├── index.html # FIN: simple intro page with nes.css
