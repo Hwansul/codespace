@@ -1,8 +1,7 @@
 /**
  * Create an element.
- * Pass in the element to create,
- * without angled brackets (<>),
- * as an argument
+ *
+ * Pass in the element to create, without angled brackets (<>), as an argument
  */
 
 let div = document.createElement("div");
