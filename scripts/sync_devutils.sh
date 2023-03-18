@@ -1,7 +1,7 @@
 #!/bin/sh
 ### Clean exisiting snippets and cheatsheets
 
-## Assign each other values in this variable where operating system you are working.
+## Assign other values respectively in this variable where operating system you are working.
 basedir_for_local_app="$HOME/.local/share"  # for WSL2 in windows 10
 # basedir_for_local_app=path/to/dir           # for macOS
 
