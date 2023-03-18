@@ -24,6 +24,9 @@ git branch -m <old_branch_name> <new_branch_name>
 # Delete a local branch (must not have it checked out to do this):
 git branch -d <branch_name>
 
+# (Gum Needed) List all branches and choose which branches to delete.
+git branch | cut -c 3- | gum choose --no-limit | xargs git branch -D
+
 # Delete a remote branch:
 git push <remote_name> --delete <remote_branch_name>
 
@@ -210,8 +213,14 @@ git log --oneline --graph
 # Show a graph of all commits, tags and branches in the entire repo(add --pretty option to show details.)
 git log --oneline --decorate --all --graph
 
+# Show a garaph of all commits, tags and branches with a long graph.
+git log --oneline --decorate --all --graph --pretty
+
 # Show commits between two dates (yyyy-mm-dd)
-git log --before="<date1>" --after="<date2>"
+git log --before="<date1>" --after="<date2>" 
+
+# (Gum Needed) Filter through your git history searching for commit messages, copying the commit hash of the commit you select.
+git log --oneline | gum filter | cut -d' ' -f1 # | copy
 
 # List all tags:
 git tag

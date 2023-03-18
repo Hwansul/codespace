@@ -3,6 +3,9 @@
 # List all installed formulae and casks:
 brew list
 
+# (Gum Needed) List all packages installed by your package manager (we'll use brew) and choose which packages to uninstall.
+brew list | gum choose --no-limit | xargs brew uninstall
+
 # Fetch the newest version of Homebrew and of all formulae and casks from the Homebrew source repository:
 brew update
 

@@ -99,6 +99,9 @@ yarn set resolution <descriptor> <resolution>
 # Lock the Yarn version used by the project. (name of version would be latest, classic, berry, and so on)
 yarn set version <version>
 
+# Will now upgrade packages across all workspaces
+yarn up
+
 # Run a command within the specified workspace.
 yarn workspace <workspaceName> <commandName>
 
