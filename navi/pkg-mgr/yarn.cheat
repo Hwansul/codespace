@@ -36,6 +36,12 @@ yarn dlx @yarnpkg/sdks vscode
 # Set up sdks for vim. This command will generate a new directory called .yarn/sdks and create a .vim/coc-settings.json
 yarn dlx @yarnpkg/sdks vim
 
+# Scaffold react project 
+yarn dlx create-react-app
+
+# Scaffold vite project on 
+yarn dlx create-vite
+
 # Execute a shell script. If you want to execute two or more commands, wrap the commands with dobule quote.
 yarn exec <commandName>
 
