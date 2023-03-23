@@ -1,7 +1,5 @@
 # Project Structure
 
-## 업데이트 필요. 아니야 나만 볼건데 영어로 해도 돼.
-
 ```shell
 ├── documents # TODO: Document project will be there. DocumentCSS, jsdoc, pydoc, and so on...
 ├── index.html # FIN: simple intro page with nes.css
@@ -29,3 +27,10 @@
 │  └── shell # TODO: add githook script with gum.
 └── yarn.lock
 ```
+
+## 주의
+
+- :fire: 폴더 Nesting 하지 말 것
+- :fire: 파일 이름에 공백 넣지 말 것
+- :fire: codespace 내에서 sync 돌리지 말 것
+- :fire: 스니펫 이름에 . 넣지 말기. (현재 nap에서 .에 대한 이스케이프가 안 되어 있음.)
