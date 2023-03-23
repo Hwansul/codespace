@@ -213,7 +213,7 @@ git log --oneline --graph
 # Show a graph of all commits, tags and branches in the entire repo(add --pretty option to show details.)
 git log --oneline --decorate --all --graph
 
-# Show a garaph of all commits, tags and branches with a long graph.
+# Show a graph of all commits, tags and branches with a long graph.
 git log --oneline --decorate --all --graph --pretty
 
 # Show commits between two dates (yyyy-mm-dd)
