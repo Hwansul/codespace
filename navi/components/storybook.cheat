@@ -1,7 +1,7 @@
 % storybook, component
 
-# (Until storybook 7.0 have been released officially) Initialize a storybook project which is built with vite. 
-yarn dlx sb@next init --builder=vite
+# Storybook initialize. If you need typescript support, run yarn add --dev typescript.
+yarn dlx sb init --builder=vite
 
-# (Until storybook 7.0 have been released officially) Migrate storybook 7.0 automatically.
-yarn dlx stroybook@next automigrate
+# Migrate storybook 7.0 automatically.
+yarn dlx stroybook automigrate
