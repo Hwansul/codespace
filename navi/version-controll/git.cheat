@@ -89,6 +89,15 @@ git rebase -i <HEAD~5>
 # Auto-resolve any conflicts by favoring the working branch version (`theirs` keyword has reversed meaning in this case)
 git rebase -X theirs <branch_name>
 
+# Show the reflog for HEAD
+git reflog
+
+# Show the reflog for a given branch
+git reflog <branch_name>
+
+Show only the num latest entries in the reflog
+git reflog -n <num>
+
 # View all available remote for a git repository
 git remote --verbose
 
