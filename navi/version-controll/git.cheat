@@ -1,5 +1,35 @@
 % git, version-controll
 
+# Add a file to the index
+git add <path/to/file>
+
+# Add all files (tracked and untracked)
+git add -A
+
+# Only add already tracked files
+git add -u
+
+# Also add ignored files
+git add -f
+
+# Interactively stage parts of files
+git add -p
+
+# Interactively stage parts of a given file
+git add -p <path/to/file>
+
+# Interactively stage a file
+git add -i
+
+# Remove file from repository index and filesystem
+git rm <path/to/file>
+
+# Remove directory
+git rm -r <path/to/directory>
+
+# Remove file from repository index but keep it untouched locally
+git rm --cached <path/to/file>
+
 # Initialize a git repository
 git init
 
@@ -133,6 +163,18 @@ git stash pop <optional_stash_name>
 
 # Drop all stashes
 git stash clear
+
+# Merge all commits from a specific branch into the current branch as a single commit
+git squash <source_branch>
+
+# Squash all commits starting with a specific commit on the current branch
+git squash <commit>
+
+# Squash the `n` latest commits and commit with a message
+git squash HEAD~n "<message>"
+
+Squash the `n` latest commits and commit concatenating all individual messages
+git squash --squash-msg HEAD~<n>
 
 # Switch to an existing branch
 git switch <branch_name>
