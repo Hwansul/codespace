@@ -1,0 +1,2 @@
+# Install Command line tab-completion for pnpm
+pnpm install-completion
