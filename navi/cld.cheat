@@ -1,0 +1,24 @@
+% cloudinary, imageCDN
+
+# Open official document for initializing
+xdg open https://cloudinary.com/documentation/cloudinary_cli
+
+
+# Install cloudinary CLI via pip3
+pip3 install cloudinary-cli
+
+# Upgrade installation of cloudinary CLI
+pip3 install --upgrade cloudinary-cli
+
+# Export your API Environment variable
+export CLOUDINARY_URL=cloudinary://<API_key>:<API_Secret>@<Cloud_Name>
+
+# After set env var in local machine, config informations by running config command.
+cld config
+
+# Push changes from your local folder to your Cloudinary folder.
+cld sync --push <LOCAL_FOLDER> <CLOUDINARY_FOLDER>
+
+# Pull changes from your Cloudinary folder to your local folder.
+cld sync --pull <LOCAL_FOLDER> <CLOUDINARY_FOLDER>
+

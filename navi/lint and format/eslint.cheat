@@ -1,0 +1,19 @@
+% eslint, lint
+
+# Create ESLint config via npx.
+npx eslint --init
+
+# Create ESLint config via yarn dlx.
+yarn dlx eslint --init
+
+# Create ESLint config via pnpx.
+pnpx eslint --init
+
+# Fix lint issues via npx
+npx eslint --fix
+
+# Fix lint issues via yarn dlx
+yarn dlx eslint --fix
+
+# Fix lint issues via pnpx
+pnpx eslint --fix

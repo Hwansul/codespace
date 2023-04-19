@@ -1,0 +1,13 @@
+% plop, code-gen
+
+# Install plop globally
+npm install --global plop
+
+# Generate a basic plopfile.js
+plop --init 
+
+# Select from a list of available generators
+plop
+
+# Run the generator with input data to bypass prompts. e.g. plop component "name of component"
+plop <name> [input]  Run the generator with input data to bypass prompts

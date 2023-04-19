@@ -1,0 +1,17 @@
+% prettier, format
+
+# Install prettier globally
+npm install --global prettier
+
+# Format a file and print the result to `stdout`
+prettier <path/to/file>
+
+# Run with a specific configuration file
+prettier --config <path/to/config_file> <path/to/file>
+
+# Format a file or directory, replacing the original
+prettier --write <path/to/file_or_directory>
+
+# Format JavaScript and TypeScript files recursively, replacing the original
+prettier --write "**/*.{js,jsx,ts,tsx}"
+
