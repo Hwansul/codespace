@@ -1,7 +1,13 @@
 % storybook, component
 
-# Storybook initialize. If you need typescript support, run yarn add --dev typescript.
+# # Storybook initialize with vite builder for npm project. (add typescript for storybook to support typescript.)
+npx sb init --builder=vite
+
+# Storybook initialize with vite builder for yarn project. (add typescript for storybook to support typescript.)
 yarn dlx sb init --builder=vite
 
-# Migrate storybook 7.0 automatically.
-yarn dlx stroybook automigrate
+# Storybook initialize with vite builder for pnpm project. (add typescript for storybook to support typescript.)
+pnpx sb init --builder=vite
+
+# Migrate storybook automatically.
+stroybook automigrate

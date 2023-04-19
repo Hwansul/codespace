@@ -1,22 +1,18 @@
+% vite, component
+
 # Setup vite project with npm without running any npm commands before.
 npx create-vite 
 
-# Setup vite project with yarn.
+# Setup vite project for npm project.
+npx create-vite
+
+# Setup vite project for yarn project. 
 yarn set version berry
 yarn init
 yarn dlx create-vite
 
-# Setup vite project with pnpm without running any 
+# Setup vite project for pnpm project.
 pnpx create-vite
 
 # Specify a config file to use with the --config CLI option
 vite --config my-config.js
-
-# Specify a config file in npm project
-npx vite --config my-config.js
-
-# Specify a config file in yarn project
-yarn dlx vite --config my-config.js
-
-# Specify a config file int pnpm project
-pnpx vite --config my-config.js
