@@ -9,9 +9,6 @@ carbon-now <path/to/file>
 # Create an image from a text in clipboard using default settings
 carbon-now --from-clipboard
 
-# Create an image from standard input using default settings
-input | carbon-now
-
 # Create images interactively for custom settings and optionally save a preset
 carbon-now -i <path/to/file>
 
@@ -26,3 +23,6 @@ carbon-now -e <line> <path/to/file>
 
 # Open image in a browser instead of saving
 carbon-now --open <path/to/file>
+
+# Save image from clipboard as a new name in my local directory that have been synced with CDN.
+carbon-now --from-clipboard --target <name> --location $MY_IMGS/<path/to/sub/dir> --preset <data|network|config|supprotive|main|DSA>
