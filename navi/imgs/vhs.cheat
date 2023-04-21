@@ -6,7 +6,7 @@ brew install vhs
 # Create a new tape file with example tape file contents and documentation
 vhs new <name>
 
-# cREATE a tape file from your terminal actions
+# Create a tape file from your terminal actions
 vhs record > <name>.tape
 
 # Generate a gif image from tape file
