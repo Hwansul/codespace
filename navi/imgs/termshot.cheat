@@ -1,0 +1,13 @@
+% termshot, imgs
+
+# Install termshot via homebrew
+brew install homeport/tap/termshot
+
+# edit content before the creating screenshot
+termshot --edit -- <command>
+
+# include command in screenshot
+termshot --show-cmd -- <command>
+
+# If you want to run a command and pipe the output into another, you have to use quotes to make this clear on the command line.
+termshot --show-cmd -- "<command1> | <command2>"
