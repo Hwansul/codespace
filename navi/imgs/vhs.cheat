@@ -13,13 +13,8 @@ vhs record > <name>.tape
 vhs <name>.tape
 
 # mine: Get gif image from result of "exa --tree" on current working directory.
-pwd | xclip
-cd $MY_IMGS/programming
-vhs $MY_RSC/src-to-gen/exa-tree.tape --output <name>.gif
-cd $(xclip -o)
+vhs $MY_RSC/src-to-gen/exa-tree.tape --output $MY_IMGS/programming/<name>.gif
+
 
 # mine: Get and publish gif image from result of "exa --tree".
-pwd | xclip
-cd $MY_IMGS/programming
-vhs $MY_RSC/src-to-gen/exa-tree.tape --output <name>.gif --publish
-cd $(xclip -o)
+vhs $MY_RSC/src-to-gen/exa-tree.tape --output $MY_IMGS/programming/<name>.gif --publish
