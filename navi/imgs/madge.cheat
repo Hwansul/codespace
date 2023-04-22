@@ -12,5 +12,5 @@ sudo apt install graphviz
 # Save graph as a SVG image (require Graphviz)
 madge --image <imgname>.svg <path/to/src>
 
-# Save graph as a svg image to my local directory for image CDN. (need to set $MY_IMGS system env)
-madge --image $MY_IMGS/programming/code/design/<imgname>.svg <path/to/src>
+# mine: Save graph as a svg image to my local directory for image CDN.
+madge --image $MY_IMGS/programming/<imgname>.svg <path/to/src>

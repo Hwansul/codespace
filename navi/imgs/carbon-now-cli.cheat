@@ -1,4 +1,4 @@
-% carbon-now-cli, snippet manage
+% carbon-now-cli, imgs
 
 # Install carbon-now-cli via npm
 npm install --global carbon-now-cli
@@ -24,5 +24,5 @@ carbon-now -e <line> <path/to/file>
 # Open image in a browser instead of saving
 carbon-now --open <path/to/file>
 
-# Save image from clipboard as a new name in my local directory that have been synced with CDN.
+# mine: Save image from clipboard as a new name in my local directory that have been synced with CDN.
 carbon-now --from-clipboard --target <name> --location $MY_IMGS/<path/to/sub/dir> --preset <data|network|config|supprotive|main|DSA>
