@@ -1,0 +1,16 @@
+% mmdc, imgs
+
+# Installation via npm
+npm install -g @mermaid-js/mermaid-cli
+
+# Convert a file to the specified format (automatically determined from the file extension):
+mmdc --input <input>.mmd --output <output.svg>
+
+# Specify the theme of the chart
+mmdc --input <input>.mmd --output <output.svg> --theme <forest|dark|neutral|base|default>
+
+# Specify the background color of the chart (e.g. `lime`, `"#D8064F"`, or `transparent`):
+mmdc --input <input>.mmd --output <output.svg> --backgroundColor <color>
+
+# mine: save diagram from my private mmd files to my image directory synced with cloudinary.
+mmdc --input $MY_RSC/src-to-gen/<input>.mmd --output $MY_IMGS/programming/<output.svg> --theme <forest|dark|neutral|base|default>
