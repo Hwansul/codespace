@@ -3,7 +3,6 @@
 # Open official document for initializing
 xdg open https://cloudinary.com/documentation/cloudinary_cli
 
-
 # Install cloudinary CLI via pip3
 pip3 install cloudinary-cli
 
@@ -22,3 +21,5 @@ cld sync --push <LOCAL_FOLDER> <CLOUDINARY_FOLDER>
 # Pull changes from your Cloudinary folder to your local folder.
 cld sync --pull <LOCAL_FOLDER> <CLOUDINARY_FOLDER>
 
+# Search resources and print out results as JSON format.
+cld search <query>
