@@ -15,7 +15,7 @@ sunbeam extension browse
 sunbeam extension install
 
 # To manage installed extensions.
-subeam extension manage
+sunbeam extension manage
 
 # Install File Browser (Python) Extension
 sunbeam extension install files https://pomdtr.github.io/sunbeam/book/examples/file-browser/sunbeam-extension
@@ -58,3 +58,9 @@ sunbeam devdocs
 
 # List all entries for a docset
 sunbeam devdocs <docset-slug>
+
+# Validate a static page
+sunbeam validate sunbeam.json
+
+# validate a dynamic page
+./github.sh | sunbeam validate
