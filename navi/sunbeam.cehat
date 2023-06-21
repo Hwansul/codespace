@@ -1,0 +1,60 @@
+% sunbeam
+# Installation via brew
+brew install pomdtr/tap/sunbeam
+
+# Installation via npm
+npm install -g sunbeam-cli
+
+# Installation from source
+go install github.com/pomdtr/sunbeam@latest
+
+# to browse the sunbeam extensions available on github
+sunbeam extension browse
+
+# To install an extension
+sunbeam extension install
+
+# To manage installed extensions.
+subeam extension manage
+
+# Install File Browser (Python) Extension
+sunbeam extension install files https://pomdtr.github.io/sunbeam/book/examples/file-browser/sunbeam-extension
+
+# Browse the current directory
+sunbeam files
+
+# Browse a specific directory
+sunbeam files </path/to/directory>
+
+# Show hidden files
+sunbeam files --show-hidden
+
+# Requirement of TLDR Pages Extension
+brew install tealdeer
+
+# Install TLDR Pages extension
+sunbeam extension install tldr https://pomdtr.github.io/sunbeam/book/examples/tldr/sunbeam-extension
+
+# List all pages
+sunbeam tldr
+
+# Requirement of Github Extension
+brew install gh
+
+# Install GitHub Extension
+sunbeam extension install github https://pomdtr.github.io/sunbeam/book/examples/github/sunbeam-extension
+
+# List all repositories
+sunbeam github
+
+# List all pull requests for a repository
+sunbeam github list-prs <repo>
+
+# Install Devdocs (Bash) Extension
+sunbeam extension install devdocs https://pomdtr.github.io/sunbeam/book/examples/devdocs/sunbeam-extension
+
+# List all docsets
+sunbeam devdocs
+
+# List all entries for a docset
+sunbeam devdocs <docset-slug>
