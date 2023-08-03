@@ -1,0 +1,7 @@
+{
+  // ...
+  "scripts": {
+    "test": "react-scripts test --env=jsdom-fourteen"
+    // ...
+  }
+}

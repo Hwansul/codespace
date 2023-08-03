@@ -1,0 +1,14 @@
+.tiles {
+  width: 600px;
+  font-size: 0;
+  margin: 0 auto;
+}
+
+.tile {
+  width: calc(600px / 3);
+  display: inline-block;
+}
+
+.tile h2 {
+  font-size: 20px;
+}

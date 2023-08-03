@@ -1,0 +1,15 @@
+p {
+  color: #101010;
+}
+
+p, p > * {
+  background-color: currentColor;
+}
+
+a {
+  color: #0077ff;
+}
+
+span {
+  color: #fd203a;
+}

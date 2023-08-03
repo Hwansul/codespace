@@ -1,0 +1,25 @@
+div {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.box {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  padding: 8px;
+  margin: 8px;
+  background: #F24333;
+  color: white;
+  border: 1px solid #BA1B1D;
+  border-radius: 4px;
+}
+
+.content-box {
+  box-sizing: content-box;
+}

@@ -1,0 +1,39 @@
+/* Global variables are defined in the :root element. */
+:root {
+  --bg-color: #fff;
+  --main-color: #000;
+  --secondary-color: #222;
+}
+/* Elements inherit variables from their parents. */
+body {
+  background-color: var(--bg-color);
+  color: var(--main-color);
+}
+small {
+  color: var(--secondary-color);
+}
+/* Elements can define their own values and variables, overriding inherited ones.*/
+body.dark {
+  --bg-color: #080808;
+  --main-color: #fff;
+  --secondary-color: #ccc;
+}
+
+.btn {
+  --bg-color: #002299;
+  --text-color: #fff;
+  --highlight-color: #669900;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+/* --highlight-color is also available to the children of .btn */
+.btn .highlight {
+  color: var(--highlight-color);
+}
+/* .btn.danger .highlight will use the --highlight-color defined in .btn-danger */
+.btn-danger {
+  --bg-color: #dd4a68;
+  --text-color: #000;
+  --highlight-color: #990055;
+}

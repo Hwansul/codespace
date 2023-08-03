@@ -1,0 +1,9 @@
+:root {
+  background-color: red;
+}
+
+html {
+  background-color: blue;
+}
+
+/* The HTML document's root element will have a red background-color.  */
