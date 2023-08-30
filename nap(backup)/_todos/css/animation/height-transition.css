@@ -1,9 +1,0 @@
-.el {
-  transition: max-height 0.3s;
-  overflow: hidden;
-  max-height: 0;
-}
-
-.trigger:hover > .el {
-  max-height: var(--max-height);
-}

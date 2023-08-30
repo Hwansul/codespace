@@ -1,9 +1,0 @@
-ul {
-  counter-reset: counter;
-  list-style: none;
-}
-
-li::before {
-  counter-increment: counter;
-  content: counters(counter, '.') ' ';
-}
