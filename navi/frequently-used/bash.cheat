@@ -3,21 +3,14 @@
 # Declaring a variable looks like this:
 variable="Some string"
 
-# But not like this:
-variable = "Some string" # => returns error "variable: command not found"
-
-# Nor like this:
-variable= "Some string" # => returns error: "Some string: command not found"
-
-# Using the variable:
 # print a variable as a string.
-echo "$variable" # => Some string
+echo "$variable" 
 
 # print a variable as a shell variable. It won't expand the variables.
-echo '$variable' # => $variable
+echo '$variable'
 
 # Parameter expansion ${...}:
-echo "${variable}" # => Some string
+echo "${variable}" 
 
 # String substitution in variables. It will return a string.
 echo "${variable/Some/A}"
@@ -27,7 +20,7 @@ length=7
 echo "${variable:0:length}"
 
 # This will return the last 5 characters (note the space before -5).
-echo "${variable: -5}" # => tring
+echo "${variable: -5}" 
 
 # falsy ? 0 : DefaultValue.
 echo "${foo:-"DefaultValueIfFooIsMissingOrEmpty"}"
@@ -60,9 +53,6 @@ echo $(( 10 + 5 ))
 
 # Lists every file and directory on a separate line
 ls -l 
-
-# Sorts the directory contents by last-modified date (descending)
-ls -t 
 
 # Recursively `ls` this directory and all of its subdirectories
 ls -R 
@@ -115,3 +105,9 @@ cut -d ',' -f 1 file.txt
 
 # replaces every occurrence of 'okay' with 'great' in file.txt (regex compatible). -i or --in-place erase the input file
 sed -i 's/okay/great/g' file.txt
+
+# Search for a pattern within a file:
+grep "search_pattern" <path/to/file>
+
+# Search for an exact string (disables regular expressions)
+grep --fixed-strings "exact_string" <path/to/file>
