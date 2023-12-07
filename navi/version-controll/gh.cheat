@@ -1,57 +1,24 @@
 % gh, version-controll
-# Create a new repository (if the repository name is not set, the default name will be the name of the current directory):
-gh repo create <name>
-
-# Clone a repository:
+# Clone a repository
 gh repo clone <owner>/<repository>
 
-# Fork and clone a repository:
+# Fork and clone a repository: (good for opensource contribution)
 gh repo fork <owner>/<repository> --clone
-
-# List repositories with a specific primary coding language:
-gh repo list <owner> --language <language_name>
-
-# Display a specific issue:
-gh issue view <issue_number>
 
 # Display a specific issue in the default web browser:
 gh issue view <issue_number> --web
 
-# Create a new issue in the default web browser:
-gh issue create --web
-
 # List the last 10 issues with the `bug` label:
 gh issue list --limit 10 --label "bug"
-
-# List closed issues made by a specific user:
-gh issue list --state closed --author <username>
 
 # Display the status of issues relevant to the user, in a specific repository:
 gh issue status --repo <owner>/<repository>
 
-# Reopen a specific issue:
-gh issue reopen issue_number
-
 # Open the homepage of the current repository in the default web browser:
 gh browse
 
-# Print the destination URL without open the web browser:
-gh browse --no-browser
-
 # Open the homepage of a specific repository in the default web browser:
 gh browse <owner>/<repository>
-
-# Open the settings page of the current repository in the default web browser:
-gh browse --settings
-
-# Open the wiki of the current repository in the default web browser:
-gh browse --wiki
-
-# Open a specific issue or pull request in the web browser:
-gh browse <issue_or_pull_request_number>
-
-# Open a specific file or directory of the current repository in the web browser:
-gh browse <path_from_root_of_repository>
 
 # Display help about environment variables that can be used with `gh`:
 gh environment
@@ -62,39 +29,20 @@ gh run view
 # Display information about a specific run:
 gh run view <workflow_run_number>
 
-# Display information about the steps of a job:
-gh run view --job=<job_number>
-
 # Display the log of a job:
 gh run view --job=job_number --log
-
-# Check a specific workflow and exit with a non-zero status if the run failed:
-gh run view <workflow_run_number> --exit-status && echo "run pending or passed"
 
 # Interactively select an active run and wait until it's done:
 gh run watch
 
-# Display the jobs for a run and wait until it's done:
-gh run watch <workflow_run_number>
-
 # Re-run a specific workflow:
 gh run rerun <workflow_run_number>
-
-# List workflow files (use `--all` to include disabled workflows):
-gh workflow list
 
 # Interactively select a workflow to view the latest jobs for:
 gh workflow view
 
 # View a specific workflow in the default browser:
 gh workflow view <id|workflow_name|filename.yml> --web
-
-# Display the YAML definition of a specific workflow:
-gh workflow view <id|workflow_name|filename.yml> --yaml
-
-# Display the YAML definition for a specific Git branch or tag:
-gh workflow view <id|workflow_name|filename.yml> --ref <branch|tag_name> --yaml
-
 
 # Run a manual workflow with parameters:
 gh workflow run <id|workflow_name|filename.yml> --raw-field param1=value1 --raw-field param2=value2 ...
@@ -111,9 +59,6 @@ gh api --help
 # Display the releases for the current repository in JSON format:
 gh api repos/:owner/:repo/releases
 
-# Create a reaction for a specific issue:
-gh api --header Accept:application/vnd.github.squirrel-girl-preview+json --raw-field 'content=+1' repos/:owner/:repo/issues/123/reactions
-
 # Display the result of a GraphQL query in JSON format:
 gh api graphql --field name='<:repo>' --raw-field '<query>'
 
@@ -123,14 +68,8 @@ gh api --method <GET|POST|PUT|DELETE> <endpoint>
 # Include the HTTP response headers in the output:
 gh api --include <endpoint>
 
-# Do not print the response body:
-gh api --silent <endpoint>
-
 # Send a request to a specific GitHub Enterprise Server:
 gh api --hostname <github.example.com> <endpoint>
-
-# Create a pull request:
-gh pr create
 
 # Check out a specific pull request locally:
 gh pr checkout <pr_number>
@@ -138,20 +77,5 @@ gh pr checkout <pr_number>
 # View the changes made in the pull request for the current branch:
 gh pr diff
 
-# Approve the pull request for the current branch:
-gh pr review --approve
-
-# Merge the pull request associated with the current branch interactively:
-gh pr merge
-
-# Edit a pull request interactively:
-gh pr edit
-
-# Edit the base branch of a pull request:
-gh pr edit --base <branch_name>
-
-# Check the status of the current repository's pull requests:
-gh pr status
-
-# (Gum Needed) List all PRs for the current GitHub repository and checkout the chosen PR.
+# (Require gum) List all PRs for the current GitHub repository and checkout the chosen PR.
 gh pr list | cut -f1,2 | gum choose | cut -f1 | xargs gh pr checkout

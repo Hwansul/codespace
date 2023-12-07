@@ -1,0 +1,16 @@
+% go, pkg-mgr
+
+# Initialize a new module in the current directory
+go mod init <module_name>
+
+# Download and install a package, specified by its import path
+go get <package_path>
+
+# Execute all test cases of the current package (files have to end with `_test.go`)
+go test
+
+#  Compile and install the current package
+go install
+
+# Install go package. for example, go install github.com/charmbracelt/gum
+go install <package_name>

@@ -1,4 +1,4 @@
-% learn-bash
+% bash, built-in, frequently-used
 
 # Declaring a variable looks like this:
 variable="Some string"

@@ -1,0 +1,9 @@
+% commands
+# Install navi cheat sheets written by mindulle into local navi from remote git repo.
+navi repo add https://github.com/hwansul/codespace
+
+# Install tldr
+brew install tlrc
+
+# Install tldr via npm
+npm install -g tldr

@@ -1,25 +1,16 @@
 % git, version-controll
 
-# Add a file to the index
-git add <path/to/file>
+# Initialize a git repository
+git init
 
 # Add all files (tracked and untracked)
 git add -A
-
-# Only add already tracked files
-git add -u
-
-# Also add ignored files
-git add -f
 
 # Interactively stage parts of files
 git add -p
 
 # Interactively stage parts of a given file
 git add -p <path/to/file>
-
-# Interactively stage a file
-git add -i
 
 # Remove file from repository index and filesystem
 git rm <path/to/file>
@@ -30,17 +21,11 @@ git rm -r <path/to/directory>
 # Remove file from repository index but keep it untouched locally
 git rm --cached <path/to/file>
 
-# Initialize a git repository
-git init
-
 # List all branches (local and remote; the current branch is highlighted by `*`):
 git branch --all
 
 # List which branches include a specific Git commit in their history:
 git branch --all --contains <commit_hash>
-
-# Show the name of the current branch:
-git branch --show-current
 
 # Create new branch based on the current commit:
 git branch <branch_name>
@@ -54,7 +39,7 @@ git branch -m <old_branch_name> <new_branch_name>
 # Delete a local branch (must not have it checked out to do this):
 git branch -d <branch_name>
 
-# (Gum Needed) List all branches and choose which branches to delete.
+# (Require gum) List all branches and choose which branches to delete.
 git branch | cut -c 3- | gum choose --no-limit | xargs git branch -D
 
 # Delete a remote branch:
@@ -71,9 +56,6 @@ git config --list --local
 
 # List only global configuration entries (stored in ~/.gitconfig)
 git config --list --global
-
-# List only system configuration entries (stored in /etc/gitconfig), and show their file location
-git config --list --system --show-origin
 
 # Edit the Git configuration for the current repository in the default editor
 git config --edit
@@ -215,21 +197,6 @@ git status -sb
 # Don't show untracked files in the output
 git status --untracked-files=no
 
-# Add a Git repository as a subtree:
-git subtree add --prefix=path/to/directory/ --squash <repository_url> <branch_name>
-
-# Update subtree repository to its latest commit
-git subtree pull --prefix=<path/to/directory/> <repository_url> <branch_name>
-
-# Merge recent changes up to the latest subtree commit into the subtree:
-git subtree merge --prefix=<path/to/directory/> --squash <repository_url> <branch_name>
-
-# Push commits to a subtree repository:
-git subtree push --prefix=<path/to/directory/> <repository_url> <branch_name>
-
-# Extract a new project history from the history of a subtree:
-git subtree split --prefix=<path/to/directory/> <repository_url> -b <branch_name>
-
 # Show only staged (added, but not yet committed) changes
 git diff --staged
 
@@ -238,15 +205,6 @@ git diff <branch_1>..<branch_2> [--] <path/to/file>
 
 # Compare different files from the current branch to other branch
 git diff <branch>:<path/to/file2> <path/to/file>
-
-# Add all files (tracked and untracked)
-git add -A
-
-# Interactively stage parts of files
-git add -p
-
-# Interactively stage parts of files
-git add -p <path/to/file>
 
 # Commit staged files to the repository with a message
 git commit -m "<message>"
