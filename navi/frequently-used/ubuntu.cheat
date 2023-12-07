@@ -1,4 +1,4 @@
-% install-to-ubuntu, built-in, frequently-used
+% ubuntu, built-in, frequently-used
 
 # Change package mirror default to kakao's one.
 sudo sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list

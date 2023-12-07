@@ -3,9 +3,6 @@
 # Start Visual Studio Code in current directory
 code .
 
-# Compare two specific files
-code --diff <path/to/file1> <path/to/file2>
-
 # Install/uninstall a specific extension
 code --<install|uninstall>-extension <publisher.extension>
 

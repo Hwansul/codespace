@@ -1,4 +1,4 @@
-% misc, built-in, frequently-used
+% openssl, security
 # Generate a hex-encoded random number.
 openssl rand -hex <digit>
 
