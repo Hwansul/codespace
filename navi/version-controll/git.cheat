@@ -313,3 +313,6 @@ git fetch --tags
 
 # List all tags whose ancestors include a given commit:
 git tag --contains <commit>
+
+# set default branch to <branch_name> globally.
+git config --global init.defaultBranch <branch_name>
