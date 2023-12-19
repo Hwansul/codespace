@@ -6,7 +6,7 @@
 cat <filename>.md | codedown <language_onto_codeblock> | <interpreter>
 
 # Codedown can use wildcards to match file paths, which are used by some markdown implementations:
-cat <filename>.md | codedown '**/*.js'
+cat <filename>.md | codedown '**/*.<ext>'
 
 # If there are multiple code blocks in the same file, you can specify a separator as the third argument:
 cat <filename>.md | codedown <language_onto_codeblock> <separator>
