@@ -1,0 +1,18 @@
+% markdown, text-processing
+
+# Codedown is a little utility to extract code blocks from Markdown files.
+
+# You can pipe the output of codedown to a language interpreter
+cat <filename>.md | codedown <language_onto_codeblock> | <interpreter>
+
+# Codedown can use wildcards to match file paths, which are used by some markdown implementations:
+cat <filename>.md | codedown '**/*.js'
+
+# If there are multiple code blocks in the same file, you can specify a separator as the third argument:
+cat <filename>.md | codedown <language_onto_codeblock> <separator>
+
+# mdsplit is a python command line tool to split markdown files into chapters at a given heading level.
+pip install mdsplit
+
+# Split a file at level <int> headings
+mdsplit <file_name>.md --max-level <int> --output <dir>
