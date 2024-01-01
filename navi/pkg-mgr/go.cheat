@@ -16,6 +16,12 @@ go test
 # Test the packages in the current directory and all subdirectories (note the ...)
 go test -v ./...
 
+# Run all unit and integration tests in our package
+go test -tags=integration
+
+# Run a specific integration test. e.g. ^TestAPISum$. 
+go test -tags=integration -run <regexp>
+
 # Test the package with coverage analysis
 go test -cover
 
