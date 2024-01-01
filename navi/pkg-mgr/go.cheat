@@ -3,14 +3,30 @@
 # Initialize a new module in the current directory
 go mod init <module_name>
 
-# Download and install a package, specified by its import path
-go get <package_path>
+# Add missing and remove unused modules
+go mod tidy
 
-# Execute all test cases of the current package (files have to end with `_test.go`)
+# replace older remote module with new local module
+go mod edit -replace <remote_module>=<local_module_path>
+
+
+# Test the package found in the current directory
 go test
+
+# Test the packages in the current directory and all subdirectories (note the ...)
+go test -v ./...
+
+# Test the package with coverage analysis
+go test -cover
 
 #  Compile and install the current package
 go install
 
-# Install go package. for example, go install github.com/charmbracelt/gum
-go install <package_name>
+# Compile and install a specific local package
+go install <path/to/package>
+
+# Install the latest version of a program, ignoring go.mod in the current directory
+go install golang.org/x/tools/gopls@latest
+
+# Install a program at the version selected by go.mod in the current directory
+go install golang.org/x/tools/gopls
